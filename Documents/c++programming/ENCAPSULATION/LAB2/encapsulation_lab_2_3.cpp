@@ -42,11 +42,11 @@ class hotel
         cin>>hotel_establish_year;
     }
 
-     void getdata(){
+    void getdata()
+    {
 
-     }
+    }
     
-
 };
 int hotel :: hotel_id;
 int hotel :: hotel_staff_quantity;
@@ -63,7 +63,7 @@ int main()
     hotel h[100];
     int n,i;
 
-    cout<<"Enter the size of train data";
+    cout<<"Enter the size of hotel data";
     cin>>n;
 
     for(i=0;i<n;i++)
