@@ -44,7 +44,7 @@ class hotel
 
     void getdata()
     {
-
+        cout<<hotel_id<<"\t"<<hotel_name<<"\t"<<hotel_type<<"\t"<<hotel_location<<"\t"<<hotel_rating<<"\t"<<hotel_staff_quantity<<"\t"<<hotel_room_quantity<<"\t"<<hotel_establish_year<<endl;
     }
     
 };
@@ -63,7 +63,7 @@ int main()
     hotel h[100];
     int n,i;
 
-    cout<<"Enter the size of hotel data";
+    cout<<"Enter the size of hotel data :=";
     cin>>n;
 
     for(i=0;i<n;i++)
