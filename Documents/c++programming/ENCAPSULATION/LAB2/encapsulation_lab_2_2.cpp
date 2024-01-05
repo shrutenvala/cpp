@@ -1,77 +1,78 @@
 
-// WAP to make Railway Reservation System.
+// WAP to make a Supermarket Billing System.
 // Requirements:
-// (A) User Input Train Number , Train Name , Source , Destination , Train Time.
-// (B) Display Record By Search Train Number.
-// (C) Minimum 3 Input Train Record.
-
+// (A) Verify User Id And Password
+// (B) User Input Item Number , Item Name , Quantity , Tax , Discount.
+// (C) Display All Record In Ascending order (by item Number)
 
 #include<iostream>
 using namespace std;
-class rail
+class bill
 {
-
     public:
-
-    int train_number,train_time;
-    char train_name[100],destination[100],source[100];
+     
+    int item_number,quantity,tax,discount;
+    char item_name[100];
 
     void setdata()
     {
-        cout<<"Enter the train number :=";
-        cin>>train_number;
+        cout<<"Enter the item number :=";
+        cin>>item_number;
 
-        cout<<"Enter the train name :=";
-        cin>>train_name;
+        cout<<"Enter the item name :=";
+        cin>>item_name;
 
-        cout<<"Enter the train time :=";
-        cin>>train_time;
+        cout<<"Enter the item quantity :=";
+        cin>>quantity;
 
-        cout<<"Enter the train source :=";
-        cin>>source;
+        cout<<"Enter the item tax :=";
+        cin>>tax;
 
-        cout<<"Enter the train destination :=";
-        cin>>destination;
+        cout<<"Enter the item discount :=";
+        cin>>discount;        
     }
-        
-        void getdata()
-        {
-            cout<<train_number<<"\t"<<train_name<<"\t"<<train_time<<"\t"<<source<<"\t"<<destination<<endl;
-
-        }
-        
-
-    
-
-
+    void getdata()
+    {
+        cout<<item_number<<"\t"<<item_name<<"\t"<<quantity<<"\t"<<tax<<"\t"<<discount<<endl;
+    }
 };
 int main()
 {
-    rail t[100];
-    int i,n;
+    bill b1;
 
-    cout<<"Enter the train data size :=";
-    cin>>n;
+    int id;
+    int pass;
 
-    for(i=0;i<n;i++)
+    cout<<"Enter your ID :=";
+    cin>>id;
+
+    cout<<"Enter your PASSWORD :=";
+    cin>>pass;
+
+    if((id==7315) && (pass==8888))
     {
-        t[i].setdata();
-    }
-    int number; 
+        cout<<"You successfully logged in the system";
+        cout<<endl<<"–––––––––––––––Welcome to the out store–––––––––––––––"<<endl<<endl;
 
-    cout<<"Enter the train number which trains data you want :=";
-    cin>>number;
+        bill b[100];
 
-    for(i=0;i<n;i++)
-    {
-        if(number == t[i].train_number)
+        int i,n;
+
+        cout<<"Enter the list of items :=";
+        cin>>n;
+
+        for(i=0;i<n;i++)
         {
-           t[i].getdata();
+            b[i].setdata();
+        }
+        for(i=0;i<n;i++)
+        {
+            b[i].getdata();
         }
     }
+    else
+    {
+        cout<<endl<<endl<<endl<<"*****  You entered wrong ID or PASSWORD  *****";
+    }
 
-
-
-
-    
 }
