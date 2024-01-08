@@ -50,7 +50,7 @@ int main()
 
     if((id==7315) && (pass==8888))
     {
-        cout<<"You successfully logged in the system";
+        cout<<"You successfully logged in the"<<endl;
         cout<<endl<<"–––––––––––––––Welcome to the out store–––––––––––––––"<<endl<<endl;
 
         bill b[100];
