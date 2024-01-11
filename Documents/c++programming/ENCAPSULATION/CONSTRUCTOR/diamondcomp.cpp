@@ -13,12 +13,45 @@
 // - comp_ceo (name of CEO of the company)
 
 #include<iostream>
+#include<string.h>
 using namespace std;
-class diamonds
+class diamond
 {
+    public:
+
+    int id,staff;
+    char name[100];
+
+    diamond(int id,char name[],int staff)
+    {
+       this->id=id;
+       strcpy(this->name,name);
+       this->staff=staff;
+    }
+
+    void getdata()
+    {
+        cout<<id<<"\t"<<name<<"\t"<<staff<<endl;
+    }
+
 
 };
 int main()
 {
+    int i,s,j,l;
+    char n[100];
+
+    cout<<"Enter the compony size list";
+    cin>>l;
     
+    for(j=0;j<l;j++)
+    {
+        cout<<"Enter the ID, NAME , STAFF";
+        cin>>i>>s>>n;
+
+        diamond d1(i,n,s);
+        d1.getdata();
+    }
+
+
 }
